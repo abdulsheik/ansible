@@ -2,6 +2,7 @@
 
 ```
 ansible-playbook <playboom.yaml>
+ansible-playbook -i <inventoryfile> <playbook.yaml>
 ```
 
 ## playbook-test.yaml
