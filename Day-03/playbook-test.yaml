@@ -1,0 +1,11 @@
+---
+- hosts: all
+  remote_user: adminabdul # SSH login user
+  become: yes # Enable privilege escalation
+  become_user: root # Run tasks as root
+  tasks:
+    - name: Install apache httpd
+      ansible.builtin.apt:
+        name: apache2
+        state: present
+        update_cache: yes
