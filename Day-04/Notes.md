@@ -50,3 +50,9 @@ Create iniventory file
 [jenkins]
 13.93.156.148 ansible_user=adminabdul ansible_ssh_private_key_file=~/.ssh/id_rsa ansible_port=22
 ```
+
+Run below command to  install nginx 
+
+```
+ansible-playbook -i inventory.ini test-play-book.yaml
+```
