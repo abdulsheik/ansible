@@ -20,7 +20,7 @@ ansible-playbook <playboom.yaml>
         update_cache: yes
 ```
 
-- hosts: all [refers to the hosts in inventory file]
+- ```hosts: all``` [refers to the hosts in inventory file]
 - remote_user: adminabdul [user to login remote hosts using SSH]
 - becomes: yes [adminabdul user gains sudo privileges]
 - become_user: root [root user to install any packages]
