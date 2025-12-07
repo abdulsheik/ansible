@@ -25,7 +25,3 @@ ansible-playbook -i <inventoryfile> <playbook.yaml>
 - ```remote_user: adminabdul``` [user to login remote hosts using SSH]
 - ```becomes: yes``` [adminabdul user gains sudo privileges]
 - ```become_user: root``` [root user to install any packages]
-
-
-abdul notes  
-new notes
