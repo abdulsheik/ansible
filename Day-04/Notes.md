@@ -2,6 +2,43 @@
 
 command to create role  
 ```
-ansible-galaxy role init <rolename>
+ansible-galaxy role init <role_name>
 ```
-above command will create below director structure
+Above command will create below director structure
+
+```
+<role_name>/
+  ├── defaults/
+  │   └── main.yml
+  ├── files/
+  ├── handlers/
+  │   └── main.yml
+  ├── meta/
+  │   └── main.yml
+  ├── tasks/
+  │   └── main.yml
+  ├── templates/
+  ├── vars/
+      └── main.yml
+```
+
+Update the main.yml file in tasks folder
+
+```
+- name: Install nginx
+  ansible.builtin.apt:
+      name: nginx
+      state: present
+      update_cache: yes
+```
+
+Create a play-book
+
+```
+- hosts: all
+  remote_user: adminabdul
+  become: yes
+  become_user: root
+  roles:
+    - nginx
+```
