@@ -6,6 +6,7 @@ ansible-galaxy role init <role_name>
 ```
 Above command will create below director structure
 
+Directory structure  
 ```
 <role_name>/
   ├── defaults/
@@ -41,4 +42,11 @@ Create a play-book
   become_user: root
   roles:
     - nginx
+```
+
+Create iniventory file
+
+```
+[jenkins]
+13.93.156.148 ansible_user=adminabdul ansible_ssh_private_key_file=~/.ssh/id_rsa ansible_port=22
 ```
